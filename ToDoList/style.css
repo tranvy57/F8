@@ -71,7 +71,7 @@ h4{
 } 
 
 
-.create-todo input[type="text"]{ 
+.create-todo input[type="text"], .create-todo input[type="datetime-local"]{ 
     font-size: 20px;
     display: block;
     color: var(--dark);
@@ -224,6 +224,18 @@ input:checked ~ .bubble::after{
     transition: 0.2s ease-in-out;
 }
 
+.todo-item .date{
+    display: flex;
+    align-items: center;
+    width: 300px;
+    gap: 10px;
+}
+.todo-item .date div{
+    color: var(--dark);
+   
+    padding: 0 10px;
+}
+
 .todo-item .action button:hover{
     opacity: 0.75;
 }
@@ -240,7 +252,18 @@ input:checked ~ .bubble::after{
     text-decoration: line-through;
     color: var(--grey);
 }
+.warn{
+    border: red solid 1px;
+}
 
+.sortByCompleteletionDate, .sortByCreateAt{
+    padding: 5px;
+    border-radius: 5px;
+    cursor: pointer;
+    transition: 0.2s ease-in-out;
+    background-color: #EA40A4;
+    color: #fff;
+}
 
 
 
