@@ -124,7 +124,7 @@ input[type="checkbox"], input[type="radio"]{
     box-shadow: var(--business-glow);
 }
 
-.bubble.personal{
+.bubble.todo{
     border-color: var(--primary);
     box-shadow: var(--personal-glow);
 }
@@ -141,7 +141,7 @@ input[type="checkbox"], input[type="radio"]{
     transition: .2s ease-in-out;
 }
 
-.bubble.personal::after{
+.bubble.todo::after{
     background-color: var(--primary);
     box-shadow: var(--personal-glow);
 }
@@ -177,10 +177,57 @@ input:checked ~ .bubble::after{
     opacity: 0.75;
 }
 
+.create-todo .editor{
+    font-size: 20px;
+    display: block;
+    color: var(--dark);
+    background-color: white;
+    padding: 15px 20px;
+    width: 100%;
+    box-shadow: var(--shadow);
+    border-radius: 10px;
+    margin-bottom: 10px;
+    outline: none;
+    border: none;
+}
+
+.create-todo .note{
+    display: flex;
+    flex-direction: column;
+}
+
+.create-todo .note input[type=file]{
+    width: 100%;
+    font-size: 15px;
+    display: block;
+    color: var(--dark);
+    background-color: white;
+    padding: 30px 20px;
+    box-shadow: var(--shadow);
+    border-radius: 10px;
+    margin-bottom: 10px;
+    outline: var(--grey) 1px dashed;
+    outline-offset: -10px;
+    border: none;
+}
+
 .todo-list .list{
     margin: 15px 0;
 }
 
+.todo-list .categoryList{
+    display: flex;
+    justify-content: space-between;
+}
+
+.todo-list .categoryList div{
+    display: flex;
+    gap: 10px;
+}
+
+.todo-list .categoryList input{
+    display: block;
+}   
 .todo-list .todo-item{
     display: flex;
     align-items: center;
@@ -263,6 +310,21 @@ input:checked ~ .bubble::after{
     transition: 0.2s ease-in-out;
     background-color: #EA40A4;
     color: #fff;
+}
+
+.statusList{
+    display: flex;
+    justify-content: space-between;
+}
+
+.statusList input{
+    display: block;
+}
+
+
+.statusList div{
+    display: flex;
+    gap: 10px;
 }
 
 

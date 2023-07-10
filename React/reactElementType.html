@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+
+<body>
+    <div id="root"></div>
+
+    <script src="https://unpkg.com/react@18/umd/react.development.js" crossorigin></script>
+    <script src="https://unpkg.com/react-dom@18/umd/react-dom.development.js" crossorigin></script>
+    <script src="https://unpkg.com/babel-standalone@6/babel.min.js"></script>
+    <script type="text/babel">
+
+        // function Header(){
+        //     return (
+        //         <div className="header"> Header</div>
+        //     )
+        // }
+
+        // const app = (
+        //     <div className="wrapper">
+        //         <Header></Header>
+        //         <div className="content">Content</div>
+        //         <div className="footer">Footer</div>
+        //     </div>
+        // )
+
+        function PostItem(){
+            return (
+                <div className="post-item"> 
+                    <img src="https://haycafe.vn/wp-content/uploads/2022/02/anh-meo-cute-hinh-cute-meo.jpg" alt="" />
+                    <h2 className="post-title">Vy cute</h2>
+                    <p className="post-description">hihi haha hoho </p>
+                    <p className="p">hi </p>
+                </div>
+            )
+        }
+
+        const app = (
+            <div className="post-list">
+                <PostItem/>
+                <PostItem/> 
+            </div>
+        )
+
+        ReactDOM.render(app, document.getElementById('root'))
+    </script>
+</body>
+
+</html>
